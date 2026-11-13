@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface: #111318;
+  --color-surface-dim: #111318;
+  --color-surface-bright: #37393e;
+  --color-surface-container-lowest: #0c0e12;
+  --color-surface-container-low: #1a1c20;
+  --color-surface-container: #1e2024;
+  --color-surface-container-high: #282a2e;
+  --color-surface-container-highest: #333539;
+  --color-on-surface: #e2e2e8;
+  --color-on-surface-variant: #bcc9cd;
+  --color-outline: #869397;
+  --color-outline-variant: #3d494c;
+  --color-primary: #4cd7f6;
+  --color-primary-container: #06b6d4;
+  --color-primary-fixed: #acedff;
+  --color-on-primary: #003640;
+  --color-on-primary-container: #00424f;
+  --color-secondary: #c0c1ff;
+  --color-secondary-container: #3131c0;
+  --color-secondary-fixed: #e1e0ff;
+  --color-on-secondary: #1000a9;
+  --color-tertiary: #ffb0cd;
+  --color-tertiary-container: #ff79b4;
+  --color-on-tertiary: #640039;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #111318;
+    color: #e2e2e8;
+    font-family: var(--font-body);
+    overscroll-behavior: none;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.crt-scanlines {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
+  background-size: 100% 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(134, 147, 151, 0.25);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(76, 215, 246, 0.45);
+}

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#780047", "error-container": "#93000a", "on-tertiary": "#640039", "secondary-fixed-dim": "#c0c1ff", "primary-fixed-dim": "#4cd7f6", "on-surface": "#e2e2e8", "surface-bright": "#37393e", "surface-container": "#1e2024", "on-tertiary-fixed-variant": "#8c0053", "outline-variant": "#3d494c", "on-primary-fixed-variant": "#004e5c", "inverse-on-surface": "#2f3035", "on-error-container": "#ffdad6", "inverse-surface": "#e2e2e8", "secondary": "#c0c1ff", "primary-container": "#06b6d4", "on-secondary-fixed": "#07006c", "on-error": "#690005", "on-secondary": "#1000a9", "on-primary-container": "#00424f", "on-surface-variant": "#bcc9cd", "surface-dim": "#111318", "surface-tint": "#4cd7f6", "surface-container-low": "#1a1c20", "surface-container-lowest": "#0c0e12", "outline": "#869397", "error": "#ffb4ab", "primary": "#4cd7f6", "on-secondary-container": "#b0b2ff", "secondary-container": "#3131c0", "tertiary-fixed-dim": "#ffb0cd", "primary-fixed": "#acedff", "on-tertiary-fixed": "#3e0022", "background": "#111318", "surface-variant": "#333539", "on-primary-fixed": "#001f26", "inverse-primary": "#00687a", "tertiary-container": "#ff79b4", "on-secondary-fixed-variant": "#2f2ebe", "surface": "#111318", "on-background": "#e2e2e8", "tertiary-fixed": "#ffd9e4", "on-primary": "#003640", "surface-container-highest": "#333539", "tertiary": "#ffb0cd", "secondary-fixed": "#e1e0ff", "surface-container-high": "#282a2e" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "body-lg": [ "Outfit" ], "headline-lg": [ "Space Grotesk" ], "display-mobile": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "label-md": [ "Space Mono" ], "label-sm": [ "Space Mono" ], "label-lg": [ "Space Mono" ], "display": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "body-md": [ "Outfit" ], "body-sm": [ "Outfit" ] }, "fontSize": { "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-space-md flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="PromptArcade Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrD7TcLnThTracj448dbtMTSfyqvTTmzez6u65vKEL3osXYITU13lRxApTz_soJrND6T-83iwAmEeMSdhLBwCh2Q-Tx0X9psJ9oX5HkewvEsSzm5mJTuOi-giGeBO-q5DlhHVuVMDT0DWM4DSZS6UuoXrmJT_l4l7W2mc8y9QwSzfTlUDpmsRFTdh5wWq1jt8zlHofHTQXyKP2u5bcY91B-Z6q_8k3w-7iXLfOaABnVknA"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">PromptArcade Studio</span><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-primary uppercase">Neon Cyber-Racer v1.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg"><span class="font-label-md text-label-md text-primary">⚡ 850 Credits</span></div><div class="hidden sm:flex items-center gap-space-xs"><button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-on-surface transition-colors rounded-lg font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-sm">ios_share</span>Share</button><button class="flex items-center gap-1 px-space-sm py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors rounded-lg font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-sm">download</span>Export</button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzpckPQ7tb-lTWQIMCxjddVdwR8BmdcGpY7ooZFi0Oy1GeZPwAVhWVVyoZZbx4i1yiCFxgv1gp7ApLCXJQxHSTaQDQ1Uc40dLBbzSt1lW6D3NwUnD3rqedI3yhUK99wJIWXb39Kft2mkqEbbhQJ1hmSfyBk3slgryj4JsS5UnIV9yC35Lm6bPftdrjEy1pocxCJK0NIcvlkxwC5QpYFjE8IpZgwQ9RsBN6ZMJ6MH4"/></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low/95 backdrop-blur-md z-40 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Arcade Library</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all bg-surface-container-high text-primary font-bold" data-path="studio" href="#"><span class="material-symbols-outlined text-base">sports_esports</span>Studio IDE</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="asset-vault" href="#"><span class="material-symbols-outlined text-base">token</span>Asset Vault</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="generation-nodes" href="#"><span class="material-symbols-outlined text-base">hub</span>Node Pipeline</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="build-telemetry" href="#"><span class="material-symbols-outlined text-base">analytics</span>Diagnostics</a></nav></div><div class="p-space-sm bg-surface-container-lowest rounded-lg"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant">GPU LATENCY</span><span class="font-label-sm text-label-sm text-primary">14ms</span></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">ACTIVE ENGINE</span><span class="font-label-sm text-label-sm text-secondary">RetroGL v2</span></div></div></aside><div class="pl-64"><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-4rem)] overflow-hidden select-none bg-surface-container-lowest text-on-surface font-body-md">
+<!-- MAIN 3-PANE WORKSPACE -->
+<div class="flex flex-row w-full h-full overflow-hidden">
+<!-- 1. LEFT SIDEBAR: PROJECTS & TEMPLATES -->
+<aside class="w-[260px] flex-shrink-0 bg-surface-container-lowest flex flex-col justify-between p-space-sm h-full shadow-[2px_0_16px_rgba(0,0,0,0.5)] z-20">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-sm flex-1 min-h-0">
+<!-- New Game CTA Button -->
+<button class="group relative w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-gradient-to-r from-primary-container via-primary to-secondary text-surface-container-lowest font-headline-sm text-label-lg font-bold shadow-[0_0_20px_rgba(6,182,212,0.45)] hover:shadow-[0_0_28px_rgba(76,215,246,0.7)] active:scale-[0.98] transition-all" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="tracking-wide">NEW GAME</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest/30 font-label-sm text-surface-container-lowest tracking-wider">⌘N</span>
+</button>
+<!-- Search Filter -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">search</span>
+<input class="w-full bg-surface-container-low pl-8 pr-2.5 py-1.5 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Filter prompts &amp; builds..." type="text"/>
+</div>
+<!-- Section Label -->
+<div class="flex items-center justify-between px-1 pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Recent Projects</span>
+<span class="font-label-sm text-label-sm text-primary">6 ACTIVE</span>
+</div>
+<!-- Scrollable Project List -->
+<div class="flex-1 overflow-y-auto space-y-1 pr-1">
+<!-- Active Item -->
+<div class="group relative flex items-center justify-between p-2 rounded-lg bg-surface-container-high cursor-pointer shadow-[inset_0_0_12px_rgba(76,215,246,0.15)] transition-all">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-md bg-primary/20 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-base">sports_motorsports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-sm text-primary font-bold truncate">Cyber-Racer 2084</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Arcade</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Just now</span>
+</div>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-on-surface-variant hover:text-on-surface p-1 transition-opacity">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+<!-- Inactive Items -->
+<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-md bg-surface-container-high text-on-surface-variant group-hover:text-primary flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-base">skull</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-sm text-on-surface group-hover:text-primary-fixed truncate transition-colors">Pixel Dungeon AI</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1 py-0.2 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Roguelike</span>
+<span class="font-label-sm text-label-sm text-outline truncate">14m ago</span>
+</div>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-on-surface-variant hover:text-on-surface p-1 transition-opacity">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-md bg-surface-container-high text-on-surface-variant group-hover:text-primary flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-base">rocket_launch</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-sm text-on-surface group-hover:text-primary-fixed truncate transition-colors">Neon Galaxy Defender</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1 py-0.2 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Shooter</span>
+<span class="font-label-sm text-label-sm text-outline truncate">1h ago</span>
+</div>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-on-surface-variant hover:text-on-surface p-1 transition-opacity">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-md bg-surface-container-high text-on-surface-variant group-hover:text-primary flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-base">adjust</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-sm text-on-surface group-hover:text-primary-fixed truncate transition-colors">Synthwave Pinball</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1 py-0.2 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Physics</span>
+<span class="font-label-sm text-label-sm text-outline truncate">3h ago</span>
+</div>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-on-surface-variant hover:text-on-surface p-1 transition-opacity">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+<div class="group flex items-center justify-between p-2 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-md bg-surface-container-high text-on-surface-variant group-hover:text-primary flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-base">swords</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-sm text-on-surface group-hover:text-primary-fixed truncate transition-colors">Vapor Slash 2D</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1 py-0.2 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">Action</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Yesterday</span>
+</div>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-on-surface-variant hover:text-on-surface p-1 transition-opacity">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+<!-- Saved Templates Sub-Section -->
+<div class="pt-3 pb-1 px-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Saved Templates</span>
+</div>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container font-body-sm text-body-sm transition-all text-left">
+<span class="material-symbols-outlined text-sm text-secondary">layers</span>
+<span>Platformer 2D Engine</span>
+</button>
+<button class="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container font-body-sm text-body-sm transition-all text-left">
+<span class="material-symbols-outlined text-sm text-secondary">fast_forward</span>
+<span>Infinite Runner Base</span>
+</button>
+<button class="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container font-body-sm text-body-sm transition-all text-left">
+<span class="material-symbols-outlined text-sm text-secondary">flare</span>
+<span>Bullet Hell Matrix</span>
+</button>
+<button class="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container font-body-sm text-body-sm transition-all text-left">
+<span class="material-symbols-outlined text-sm text-secondary">space_bar</span>
+<span>Space Invaders Classic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom User Profile & Quota Box -->
+<div class="mt-space-sm pt-space-sm flex flex-col gap-2">
+<!-- Token Balance Card -->
+<div class="p-2.5 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary animate-pulse">bolt</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-tight">Prompt Tokens</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">850 / 1000</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-2">
+<div class="h-full bg-gradient-to-r from-primary via-primary-container to-secondary rounded-full w-[85%] shadow-[0_0_8px_rgba(76,215,246,0.6)]"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline">Resets in 6d</span>
+<button class="text-secondary hover:text-secondary-fixed font-bold hover:underline">Upgrade Plan</button>
+</div>
+</div>
+<!-- User Summary -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2 min-w-0">
+<img alt="User Avatar" class="w-8 h-8 rounded-full object-cover shadow-[0_0_8px_rgba(76,215,246,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzpckPQ7tb-lTWQIMCxjddVdwR8BmdcGpY7ooZFi0Oy1GeZPwAVhWVVyoZZbx4i1yiCFxgv1gp7ApLCXJQxHSTaQDQ1Uc40dLBbzSt1lW6D3NwUnD3rqedI3yhUK99wJIWXb39Kft2mkqEbbhQJ1hmSfyBk3slgryj4JsS5UnIV9yC35Lm6bPftdrjEy1pocxCJK0NIcvlkxwC5QpYFjE8IpZgwQ9RsBN6ZMJ6MH4"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate leading-tight">Raven_Dev</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-tight">Pro Studio Tier</span>
+</div>
+</div>
+<button class="p-1 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Settings">
+<span class="material-symbols-outlined text-lg">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- 2. MIDDLE PANE: AI PROMPT CONSOLE & ITERATION CHAT -->
+<section class="w-[380px] xl:w-[420px] flex-shrink-0 bg-surface-container-low flex flex-col h-full shadow-[2px_0_20px_rgba(0,0,0,0.4)] z-10">
+<!-- Chat Header -->
+<div class="px-space-md py-3 bg-surface-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="relative flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping absolute"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary relative"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md text-on-surface font-bold tracking-tight">AI Game Engine</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">v4.2</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary/80">Active Engine Ready</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<!-- Model Selector Dropdown Pill -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-high text-on-surface hover:text-primary font-label-sm text-label-sm py-1 pl-2.5 pr-6 rounded-lg cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary transition-all">
+<option>ArcadeCraft-v4-Turbo</option>
+<option>PhysicsGPT-2D</option>
+<option>VoxelForge-Experimental</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-on-surface-variant">expand_more</span>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Clear chat history">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Message History Area -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-4">
+<!-- Message 1: User -->
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1.5 mb-1 mr-1">
+<span class="font-label-sm text-label-sm text-outline">Raven_Dev</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:42 AM</span>
+</div>
+<div class="max-w-[88%] p-3 rounded-2xl rounded-tr-xs bg-surface-container-highest text-on-surface font-body-sm text-body-sm shadow-md leading-relaxed">
+            Generate a fast-paced 2D cyberpunk arcade runner with neon grid roads, obstacles to dodge, speed boosts, synthwave color scheme, and retro score tracking.
+          </div>
+</div>
+<!-- Message 2: AI Response -->
+<div class="flex flex-col items-start">
+<div class="flex items-center gap-1.5 mb-1 ml-1">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-surface-container-lowest font-bold text-[9px]">AI</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">ArcadeCraft v4</span>
+<span class="font-label-sm text-label-sm text-outline">10:43 AM</span>
+</div>
+<div class="max-w-[92%] p-3 rounded-2xl rounded-tl-xs bg-surface-container text-on-surface shadow-md">
+<p class="font-body-sm text-body-sm leading-relaxed mb-2.5">
+              Generated build <span class="text-primary font-semibold">v1.0</span>! Initialized 2D canvas engine, physics loop (60 FPS), procedural neon road generation, and collision detection.
+            </p>
+<!-- Generated Artifact Badges -->
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-xs">javascript</span>
+                Canvas2D.js
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-high text-secondary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-xs">audiotrack</span>
+                SynthBeats.mp3
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-high text-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-xs">image</span>
+                CyberCar.png
+              </span>
+</div>
+</div>
+</div>
+<!-- Message 3: User Iteration -->
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1.5 mb-1 mr-1">
+<span class="font-label-sm text-label-sm text-outline">Raven_Dev</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:45 AM</span>
+</div>
+<div class="max-w-[88%] p-3 rounded-2xl rounded-tr-xs bg-surface-container-highest text-on-surface font-body-sm text-body-sm shadow-md leading-relaxed">
+            Can we increase speed by 25%, add glowing particle trails behind the player vehicle, and make obstacles pulse neon magenta?
+          </div>
+</div>
+<!-- Message 4: AI Response -->
+<div class="flex flex-col items-start">
+<div class="flex items-center gap-1.5 mb-1 ml-1">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-surface-container-lowest font-bold text-[9px]">AI</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">ArcadeCraft v4</span>
+<span class="font-label-sm text-label-sm text-outline">10:46 AM</span>
+</div>
+<div class="max-w-[92%] p-3 rounded-2xl rounded-tl-xs bg-surface-container text-on-surface shadow-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-sm text-label-sm font-bold">COMPILED #v1.4</span>
+<span class="font-label-sm text-label-sm text-outline">Hot Reload: 120ms</span>
+</div>
+<p class="font-body-sm text-body-sm leading-relaxed mb-3">
+              Applied updates in <span class="text-primary font-semibold">Build v1.4</span>! Added dynamic velocity scalar (+25%), WebGL bloom shader particle trails, and reactive magenta pulse animation on hazard collisions.
+            </p>
+<!-- Code Diff Summary Microcard -->
+<div class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm space-y-1">
+<div class="flex items-center justify-between text-outline">
+<span>DELTA INSPECTOR</span>
+<span class="text-primary">+38 lines</span>
+</div>
+<div class="text-primary truncate">player.maxVelocity *= 1.25;</div>
+<div class="text-secondary truncate">emitParticleTrail({ bloom: true, hue: 195 });</div>
+<div class="text-tertiary truncate">hazard.pulseColor = 'rgba(255, 121, 180, 0.9)';</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Prompt Input Footer Area -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col gap-2 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<!-- Modifier Suggestion Chips (Horizontal Scroll) -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-nowrap">
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>🔥</span> Make it harder
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>🎨</span> Synthwave palette
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>👾</span> Boss encounter
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>⚡</span> Double speed
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>🎵</span> 8-bit retro SFX
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1 shadow-sm">
+<span>🕹️</span> Mobile controls
+          </button>
+</div>
+<!-- Textarea & Prompt Trigger Box -->
+<div class="p-2.5 rounded-xl bg-surface-container-high shadow-inner focus-within:shadow-[0_0_16px_rgba(6,182,212,0.35)] transition-all">
+<textarea class="w-full bg-transparent resize-none font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Describe gameplay mechanics, visual style, physics or rules (e.g., 'Add double jump and coin combos')..." rows="3"></textarea>
+<!-- Bottom Action Toolbar inside Input -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Fine-tune weights">
+<span class="material-symbols-outlined text-base">tune</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Voice prompt">
+<span class="material-symbols-outlined text-base">mic</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Upload asset reference">
+<span class="material-symbols-outlined text-base">attach_file</span>
+</button>
+<span class="ml-2 font-label-sm text-label-sm text-outline hidden sm:inline">TOKENS: 48/512</span>
+</div>
+<!-- Generate Execute Button -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-primary-container via-primary to-secondary text-surface-container-lowest font-headline-sm text-label-sm font-bold shadow-[0_0_16px_rgba(6,182,212,0.45)] hover:shadow-[0_0_24px_rgba(76,215,246,0.7)] active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-base">auto_awesome</span>
+<span>GENERATE</span>
+<span class="text-[9px] opacity-75 font-label-sm">↵</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. RIGHT PANE: LIVE GAME ENGINE RUNTIME & TELEMETRY -->
+<main class="flex-1 bg-surface-container-lowest flex flex-col h-full overflow-hidden p-space-md relative">
+<!-- Top Control Toolbar -->
+<header class="w-full h-11 px-3 mb-space-sm rounded-xl bg-surface-container flex items-center justify-between shadow-md">
+<!-- Left Controls: Live status & runtime buttons -->
+<div class="flex items-center gap-2">
+<!-- Game status badge -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-emerald-400 font-bold tracking-wider">LIVE 60 FPS</span>
+</div>
+<div class="hidden lg:flex items-center gap-2 font-label-sm text-label-sm text-outline px-1">
+<span>12ms</span>
+<span>•</span>
+<span class="text-primary font-bold">#v1.4.2</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<!-- Play/Pause Toggle -->
+<button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-emerald-400 transition-colors shadow-sm" title="Pause Game Engine">
+<span class="material-symbols-outlined text-base">pause</span>
+</button>
+<!-- Restart / Reset -->
+<button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-primary transition-colors shadow-sm" title="Reset Session">
+<span class="material-symbols-outlined text-base">replay</span>
+</button>
+<!-- Audio Mute -->
+<button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-secondary transition-colors shadow-sm" title="Toggle Synth Sound">
+<span class="material-symbols-outlined text-base">volume_up</span>
+</button>
+</div>
+<!-- Center Controls: Viewport Aspect Ratio & Scanline Toggle -->
+<div class="hidden md:flex items-center gap-2">
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">
+<button class="px-2 py-0.5 rounded bg-surface-container text-primary font-bold shadow-sm">16:9 1080p</button>
+<button class="px-2 py-0.5 hover:text-on-surface transition-colors">4:3 CRT</button>
+<button class="px-2 py-0.5 hover:text-on-surface transition-colors">Mobile</button>
+<button class="px-2 py-0.5 hover:text-on-surface transition-colors">Auto</button>
+</div>
+<!-- CRT Scanline Switch -->
+<label class="flex items-center gap-1.5 cursor-pointer px-2 py-1 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<input checked="" class="w-3 h-3 accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">CRT SCANLINES</span>
+</label>
+</div>
+<!-- Right Controls: Inspect, Undo commit, Publish -->
+<div class="flex items-center gap-2">
+<button class="hidden lg:flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined text-xs">history</span>
+<span>v1.4 (Latest)</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-primary font-label-sm text-label-sm transition-colors shadow-sm">
+<span class="material-symbols-outlined text-xs">code</span>
+<span class="hidden sm:inline">Code / Logic</span>
+</button>
+<button class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-primary transition-colors shadow-sm" title="Fullscreen Play">
+<span class="material-symbols-outlined text-base">fullscreen</span>
+</button>
+<!-- Publish & Share CTA -->
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gradient-to-r from-secondary-container to-secondary text-on-secondary font-headline-sm text-label-sm font-bold shadow-[0_0_16px_rgba(192,193,255,0.4)] hover:shadow-[0_0_24px_rgba(192,193,255,0.6)] active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+<span>PUBLISH</span>
+</button>
+</div>
+</header>
+<!-- Center Game Preview Execution Viewport (Glossy Arcade Canvas Simulation) -->
+<div class="flex-1 w-full relative rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(6,182,212,0.15)] flex flex-col items-center justify-center bg-surface-container-lowest">
+<!-- CRT Screen Scanline Overlay Effect -->
+<div class="absolute inset-0 pointer-events-none z-20 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.35)_50%)] bg-[length:100%_4px] opacity-40"></div>
+<div class="absolute inset-0 pointer-events-none z-20 shadow-[inset_0_0_80px_rgba(0,0,0,0.8)]"></div>
+<!-- Dynamic Game Canvas Simulation Container -->
+<div class="relative w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#130722] via-[#070b19] to-[#04060d]">
+<!-- Background Cyberpunk Horizon & Wireframe Sun -->
+<div class="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none">
+<!-- Glowing Wireframe Neon Sun -->
+<div class="absolute top-1/4 w-56 h-56 rounded-full bg-gradient-to-t from-tertiary-container via-tertiary to-transparent shadow-[0_0_80px_rgba(255,121,180,0.6)] opacity-90 flex flex-col justify-end overflow-hidden">
+<div class="w-full h-1 bg-surface-container-lowest mb-2 opacity-60"></div>
+<div class="w-full h-1.5 bg-surface-container-lowest mb-2.5 opacity-70"></div>
+<div class="w-full h-2 bg-surface-container-lowest mb-3 opacity-80"></div>
+<div class="w-full h-3 bg-surface-container-lowest mb-4 opacity-90"></div>
+</div>
+<!-- Skyline Silhouettes -->
+<div class="absolute top-[48%] left-0 right-0 h-16 flex items-end justify-around px-8 opacity-60">
+<div class="w-8 h-12 bg-surface-container-lowest"></div>
+<div class="w-12 h-16 bg-surface-container-lowest"></div>
+<div class="w-6 h-8 bg-surface-container-lowest"></div>
+<div class="w-14 h-20 bg-surface-container-lowest"></div>
+<div class="w-10 h-14 bg-surface-container-lowest"></div>
+<div class="w-16 h-10 bg-surface-container-lowest"></div>
+<div class="w-7 h-16 bg-surface-container-lowest"></div>
+<div class="w-12 h-12 bg-surface-container-lowest"></div>
+</div>
+<!-- 3D Perspective Grid Track (SVG) -->
+<svg class="absolute bottom-0 w-full h-[52%] opacity-85" preserveaspectratio="none" viewbox="0 0 1000 500">
+<defs>
+<lineargradient id="grid-fade" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.9"></stop>
+</lineargradient>
+<lineargradient id="road-glow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ff79b4" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#ff79b4" stop-opacity="0.8"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal perspective lines -->
+<line stroke="url(#grid-fade)" stroke-width="1" x1="0" x2="1000" y1="20" y2="20"></line>
+<line stroke="url(#grid-fade)" stroke-width="1.2" x1="0" x2="1000" y1="50" y2="50"></line>
+<line stroke="url(#grid-fade)" stroke-width="1.5" x1="0" x2="1000" y1="90" y2="90"></line>
+<line stroke="url(#grid-fade)" stroke-width="2" x1="0" x2="1000" y1="140" y2="140"></line>
+<line stroke="url(#grid-fade)" stroke-width="2.5" x1="0" x2="1000" y1="205" y2="205"></line>
+<line stroke="url(#grid-fade)" stroke-width="3" x1="0" x2="1000" y1="290" y2="290"></line>
+<line stroke="url(#grid-fade)" stroke-width="4" x1="0" x2="1000" y1="395" y2="395"></line>
+<!-- Converging vanishing grid road lines -->
+<line stroke="url(#road-glow)" stroke-dasharray="16, 12" stroke-width="3" x1="500" x2="500" y1="0" y2="500"></line>
+<line stroke="url(#road-glow)" stroke-width="3" x1="500" x2="320" y1="0" y2="500"></line>
+<line stroke="url(#road-glow)" stroke-width="3" x1="500" x2="680" y1="0" y2="500"></line>
+<line stroke="url(#grid-fade)" stroke-width="2" x1="500" x2="140" y1="0" y2="500"></line>
+<line stroke="url(#grid-fade)" stroke-width="2" x1="500" x2="860" y1="0" y2="500"></line>
+<line stroke="url(#grid-fade)" stroke-width="1.5" x1="500" x2="-60" y1="0" y2="500"></line>
+<line stroke="url(#grid-fade)" stroke-width="1.5" x1="500" x2="1060" y1="0" y2="500"></line>
+</svg>
+</div>
+<!-- In-Game Arcade HUD Layer (Top overlay) -->
+<div class="relative z-10 w-full p-4 flex items-start justify-between">
+<!-- Left Stats Box -->
+<div class="flex flex-col gap-1.5 p-3 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.6)]">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SCORE</span>
+<span class="font-display text-headline-sm text-primary tracking-widest font-black drop-shadow-[0_0_8px_rgba(76,215,246,0.8)]">048,290</span>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<div><span class="text-outline">HI-SCORE: </span><span class="text-secondary font-bold">120,500</span></div>
+<div><span class="text-outline">MULTIPLIER: </span><span class="text-tertiary font-bold">x4</span></div>
+</div>
+</div>
+<!-- Center Stage Notification -->
+<div class="hidden sm:flex flex-col items-center">
+<span class="px-3 py-1 rounded-full bg-tertiary-container/30 text-tertiary font-headline-sm text-label-md font-bold tracking-widest uppercase animate-pulse shadow-[0_0_16px_rgba(255,121,180,0.5)]">
+                SPEED BOOST ACTIVE // +25%
+              </span>
+</div>
+<!-- Right Telemetry Gauges -->
+<div class="flex flex-col items-end gap-1.5 p-3 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.6)]">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">VELOCITY</span>
+<span class="font-display text-headline-sm text-secondary font-black drop-shadow-[0_0_8px_rgba(192,193,255,0.8)]">240 <span class="text-xs">KM/H</span></span>
+</div>
+<!-- Shield Integrity Bar -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">SHIELD</span>
+<div class="w-24 h-2 bg-surface-container-highest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-primary rounded-full w-[88%] shadow-[0_0_8px_rgba(76,215,246,0.8)]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">88%</span>
+</div>
+</div>
+</div>
+<!-- Midground: Floating Hazards & Power-Up Nodes -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+<!-- Neon Magenta Hazard Barrier 1 (Distant) -->
+<div class="absolute top-[52%] left-[44%] w-12 h-6 rounded bg-gradient-to-r from-tertiary-container via-tertiary to-tertiary-container shadow-[0_0_20px_rgba(255,121,180,0.9)] opacity-85 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-xs text-surface-container-lowest font-black">warning</span>
+</div>
+<!-- Collectible Cyber Crystal Node -->
+<div class="absolute top-[60%] right-[38%] w-8 h-8 rotate-45 bg-gradient-to-tr from-primary to-secondary shadow-[0_0_24px_rgba(76,215,246,0.9)] flex items-center justify-center animate-bounce">
+<span class="w-3 h-3 bg-white rounded-full blur-[1px]"></span>
+</div>
+<!-- Neon Magenta Hazard Barrier 2 (Closer) -->
+<div class="absolute top-[68%] left-[28%] w-24 h-10 rounded-md bg-gradient-to-r from-tertiary via-tertiary-container to-tertiary shadow-[0_0_30px_rgba(255,121,180,1)] flex items-center justify-around px-2">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest animate-ping"></span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest font-black tracking-wider">DANGER</span>
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest animate-ping"></span>
+</div>
+<!-- Player Cyber Runner Vehicle Model -->
+<div class="absolute bottom-[14%] left-1/2 -translate-x-1/2 flex flex-col items-center">
+<!-- Vehicle Body (Futuristic Hovercar) -->
+<div class="relative w-36 h-20 rounded-2xl bg-gradient-to-b from-surface-container-highest via-[#0d1b2a] to-surface-container-lowest shadow-[0_0_40px_rgba(6,182,212,0.8)] flex flex-col items-center justify-between p-2">
+<!-- Cockpit Glow -->
+<div class="w-16 h-7 rounded-xl bg-gradient-to-b from-primary via-primary-container to-secondary shadow-[0_0_20px_rgba(76,215,246,0.9)] flex items-center justify-center">
+<div class="w-10 h-1 bg-white/70 rounded-full blur-[0.5px]"></div>
+</div>
+<!-- Dual Thrusters -->
+<div class="w-full flex justify-between px-3">
+<div class="w-5 h-2 rounded-full bg-primary shadow-[0_0_12px_rgba(76,215,246,1)]"></div>
+<div class="w-5 h-2 rounded-full bg-primary shadow-[0_0_12px_rgba(76,215,246,1)]"></div>
+</div>
+</div>
+<!-- Particle Trail Emission Streams -->
+<div class="w-32 flex justify-between px-4 -mt-1">
+<div class="w-4 h-16 bg-gradient-to-b from-primary via-secondary to-transparent blur-[2px] opacity-90"></div>
+<div class="w-4 h-16 bg-gradient-to-b from-primary via-secondary to-transparent blur-[2px] opacity-90"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Viewport Controls Prompt Overlay -->
+<div class="relative z-10 w-full p-4 flex items-end justify-between">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-sm text-primary">sports_esports</span>
+<span>CONTROLS:</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">[W][A][S][D]</span>
+<span>OR</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">[ARROWS]</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold">[SPACE] NITRO</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-primary transition-colors shadow-md" title="Mute Audio">
+<span class="material-symbols-outlined text-base">volume_up</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-primary transition-colors shadow-md" title="Reset Camera">
+<span class="material-symbols-outlined text-base">videocam</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Quick Dev Stats Bar / Collapsible Console Drawer -->
+<footer class="w-full mt-space-sm rounded-xl bg-surface-container px-3 py-2 flex items-center justify-between shadow-md">
+<!-- Left: Diagnostic Readouts -->
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="text-outline">Engine:</span>
+<span class="text-primary font-bold">WebGL / RetroGL v2</span>
+</div>
+<div class="hidden sm:flex items-center gap-1.5">
+<span class="text-outline">Memory:</span>
+<span class="text-on-surface font-semibold">42.4 MB</span>
+</div>
+<div class="hidden md:flex items-center gap-1.5">
+<span class="text-outline">Frame Latency:</span>
+<span class="text-emerald-400 font-semibold">16.6ms (Locked)</span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5">
+<span class="text-outline">Entities:</span>
+<span class="text-secondary font-semibold">148 Active</span>
+</div>
+</div>
+<!-- Right: Inspector Tabs & Quick Export -->
+<div class="flex items-center gap-1 text-label-sm font-label-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-bold hover:bg-surface-container-highest transition-colors">
+            Console (0)
+          </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors hidden sm:inline">
+            Physics Inspector
+          </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors hidden sm:inline">
+            Audio Mixer
+          </button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-highest text-secondary hover:text-secondary-fixed transition-colors font-semibold ml-1">
+<span class="material-symbols-outlined text-xs">archive</span>
+<span>HTML5 Export</span>
+</button>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<script>
+  // Micro-interactions and HUD button reactivity
+  document.addEventListener('DOMContentLoaded', () => {
+    // Quick modifier chip append to prompt textarea
+    const chips = document.querySelectorAll('button:has(span)');
+    const textarea = document.querySelector('textarea');
+    
+    // Scanline checkbox toggle
+    const crtCheckbox = document.querySelector('input[type="checkbox"]');
+    const crtOverlay = document.querySelector('.bg-\\[linear-gradient\\(rgba\\(18\\,16\\,16\\,0\\)_50\\%\\,rgba\\(0\\,0\\,0\\,0\\.35\\)_50\\%\\)\\]');
+    
+    if (crtCheckbox && crtOverlay) {
+      crtCheckbox.addEventListener('change', (e) => {
+        crtOverlay.style.display = e.target.checked ? 'block' : 'none';
+      });
+    }
+  });
+</script></main></div></body></html>
